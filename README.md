@@ -11,4 +11,4 @@ If you are using a windows machine open the `start.sh` file with vscode. Click o
 
 ## What is this
 
-This is a simple example how to use prisma and postgres with your nextjs application and dockerize it.
+This sample builds on the [nextjs-prisma-sample](https://github.com/luisthieme/nextjs-prisma). It shows the very basics of what you need to get next-auth up and running with prisma and postgres in docker.
