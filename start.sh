@@ -5,7 +5,7 @@ do
   echo "Waiting for PostgreSQL to start..."
   sleep 5
 done
-echo "PostgreSQL is up and running!"
+echo "PostgreSQL is up and running!."
 
 npx prisma migrate dev
 npx prisma db seed
