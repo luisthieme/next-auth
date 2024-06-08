@@ -12,5 +12,5 @@ RUN npx prisma generate
 
 COPY start.sh /app
     
-CMD ["chmod","+x", "/app/start.sh"]
+CMD ["chmod","+x", "./start.sh"]
 
