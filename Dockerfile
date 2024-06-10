@@ -2,7 +2,7 @@ FROM node:20-alpine
 
 WORKDIR /app
 
-copy package*.json ./
+COPY package*.json ./
 
 RUN npm install
 
@@ -11,6 +11,5 @@ COPY . .
 RUN npx prisma generate
 
 COPY start.sh /app
-    
-CMD ["chmod","+x", "./start.sh"]
 
+CMD ["chmod","777", "/app/start.sh"]
