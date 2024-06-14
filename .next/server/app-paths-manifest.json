@@ -2,5 +2,6 @@
   "/page": "app/page.js",
   "/clientsideprotection/page": "app/clientsideprotection/page.js",
   "/middlewareprotection/page": "app/middlewareprotection/page.js",
-  "/serversideprotection/page": "app/serversideprotection/page.js"
+  "/api/auth/[...nextauth]/route": "app/api/auth/[...nextauth]/route.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js"
 }
