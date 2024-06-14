@@ -6,10 +6,10 @@ export default async function Home() {
   const session = await getServerSession();
 
   return (
-    <main className="max-w-3xl mx-auto flex flex-col gap-4 mt-24">
+    <main className="w-11/12 max-w-3xl mx-auto flex flex-col gap-4 mt-48">
       <div className="w-full flex flex-col p-4 gap-4 items-center rounded-lg border border-neutral-100 shadow-md">
         <h1 className="w-full font-bold text-xl text-center ">Current Session:</h1>{" "}
-      <pre className="bg-neutral-200 rounded-lg p-2">{JSON.stringify(session)}</pre>
+      <pre className="bg-neutral-200 rounded-lg p-2 text-xxs sm:text-base">{JSON.stringify(session)}</pre>
       </div>
       <div className="w-full flex gap-2">
       <SessionButtons />
