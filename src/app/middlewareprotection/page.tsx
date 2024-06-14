@@ -1,3 +1,5 @@
+import ProtectedContent from "@/components/ProtectedContent";
+
 export default function Page() {
-  return <h1>Protected Page</h1>;
+  return <ProtectedContent />;
 }

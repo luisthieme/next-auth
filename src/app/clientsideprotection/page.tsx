@@ -1,18 +1,20 @@
 "use client";
 
 import { useSession } from "next-auth/react";
+import NotAuthorized from "@/components/NotAuthorized";
+import ProtectedContent from "@/components/ProtectedContent";
+import Loading from "@/components/Loading";
 
 export default function Page() {
-  const { status } = useSession({
-    required: true,
-    onUnauthenticated() {
-      console.log("Not logged in!");
-    },
-  });
+  const session = useSession();
 
-  if (status != "authenticated") {
-    return <h1>Not authenticated</h1>;
+  if (session.status == "loading") {
+    return <Loading />;
   }
 
-  return <h1>Protected Page</h1>;
+  if (session.status != "authenticated") {
+    return <NotAuthorized />;
+  }
+
+  return <ProtectedContent />;
 }
