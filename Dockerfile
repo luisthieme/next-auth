@@ -10,6 +10,4 @@ COPY . .
 
 RUN npx prisma generate
 
-COPY start.sh /app
-
-CMD ["chmod","777", "/app/start.sh"]
+CMD ["npm","run", "dev"]
